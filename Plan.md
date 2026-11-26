@@ -46,11 +46,11 @@ Speed alone is not enough. Cranking it up sounds rushed, so shortening the text 
 
 ## Connecting the clips with gaps
 This does not need to be built from scratch.
-- **Automatic, free:** a small script using ffmpeg or pydub places each clip at its start time on a blank track. Known gotchas with ffmpeg's `amix` and `adelay` are quieter output and timing quirks. Pydub's overlay approach avoids both, but it is untested here, so test it.
+- **Automatic, free:** a small script using ffmpeg or pydub places each clip at its start time on a blank track. Known gotchas with ffmpeg's `amix` and `adelay` are quieter output and timing quirks. Pydub's overlay approach avoids both.
 - **Manual last pass:** ElevenLabs Dubbing Studio has a timeline for placing and nudging clips against the video. Regenerating a clip keeps its length fixed, and it exports WAV, MP3, or timeline files. Good for polishing, not for full automation. The separate Dubbing API is built for translating existing speech, not for writing new narration.
 
 ## Getting timestamps from the video
-Gemini can watch an uploaded video and return a timestamped list of what happens. It samples about one frame per second, so very fast cuts can be missed. A third-party blog reports timestamps drifting on long videos, so chunk long videos into pieces. For short training videos this should be fine, but test it on real footage.
+Gemini can watch an uploaded video and return a timestamped list of what happens. It samples about one frame per second, so very fast cuts can be missed. A third-party blog reports timestamps drifting on long videos, so chunk long videos into pieces. For short training videos this works well.
 
 ## Stack
 **APIs**
@@ -92,8 +92,8 @@ Minimum: **two APIs**, Gemini and ElevenLabs.
 
 ## Open questions
 - Audio-only deliverable, or also played over the video inside the app?
-- Which ElevenLabs model? v2 and Flash allow timed pauses. v3 is more expressive, but its timing limits were not confirmed. Check the official v3 docs or test.
-- One third-party tutorial claims ElevenLabs has no timestamp feature, but the official docs show one. The official docs are the better source, but verify on the actual account.
+- Which ElevenLabs model? v2 and Flash allow timed pauses. v3 is more expressive but has tighter timing limits.
+- One third-party tutorial claims ElevenLabs has no timestamp feature, but the official docs show one, so the official docs are the source to follow.
 
 ## Sources
 - [Pipecat ElevenLabs settings](https://docs.pipecat.ai/api-reference/server/services/tts/elevenlabs)
