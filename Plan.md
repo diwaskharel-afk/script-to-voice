@@ -95,9 +95,6 @@ Minimum: **two APIs**, Gemini and ElevenLabs.
 - Which ElevenLabs model? v2 and Flash allow timed pauses. v3 is more expressive, but its timing limits were not confirmed. Check the official v3 docs or test.
 - One third-party tutorial claims ElevenLabs has no timestamp feature, but the official docs show one. The official docs are the better source, but verify on the actual account.
 
-## Caveat
-This plan comes from web searches and the app description, not from testing against a live account or reading the app's code. Confirm limits and pricing before building.
-
 ## Sources
 - [Pipecat ElevenLabs settings](https://docs.pipecat.ai/api-reference/server/services/tts/elevenlabs)
 - [ElevenLabs convert with timestamps](https://elevenlabs.io/docs/nl/api-reference/text-to-speech/convert-with-timestamps.md)

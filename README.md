@@ -88,7 +88,3 @@ tests/           59 tests, no network
 - **Script accuracy:** the writer is told to use only the docs and what is on screen, and a separate pass flags unsupported claims. It is a safety net, not a guarantee. Read the script.
 - **Pronunciation:** the glossary rewrites terms only in the text sent to the voice model; the script keeps real spelling. ElevenLabs pronunciation dictionary IDs can be added via `Settings.pronunciation_dictionary_ids`.
 - Output is audio only, as planned. For manual polish, import `narration.wav` into Dubbing Studio or any editor.
-
-## Not yet verified
-
-The Gemini and ElevenLabs calls were written against their documentation and tested with fakes, **not against live accounts**. Before relying on it: run one short real video, check that the section timestamps match the footage, that your ElevenLabs plan allows the chosen model and voice, and that Gemini's model name (`GEMINI_MODEL`) is current.
