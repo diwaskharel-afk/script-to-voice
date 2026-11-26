@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "script-to-voice"
+version = "0.1.0"
+description = "Turn a training video plus its documentation into one timed narration audio track."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "pydub>=0.25.1",
+    "audioop-lts>=0.2.1; python_version >= '3.13'",
+    "imageio-ffmpeg>=0.5.1",
+    "pypdf>=4.0",
+    "google-genai>=1.0",
+    "streamlit>=1.35",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+stv = "script_to_voice.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+filterwarnings = ["ignore:Couldn't find ffmpeg or avconv:RuntimeWarning"]

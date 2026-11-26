@@ -1,0 +1,5 @@
+# term = how it should be spoken
+EMEA = ee-mee-uh
+CSV = C S V
+SQL = sequel
+Kubernetes = koo-ber-net-eez

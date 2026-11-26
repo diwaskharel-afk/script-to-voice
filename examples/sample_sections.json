@@ -1,0 +1,7 @@
+[
+  {"start": "0:02", "end": "0:10", "title": "Open the dashboard", "description": "The user signs in and the Reports dashboard loads."},
+  {"start": "0:12", "end": "0:15", "title": "Choose a date range", "description": "The user opens the date picker and selects the last 30 days."},
+  {"start": "0:18", "end": "0:30", "title": "Add a filter", "description": "The user clicks Add filter, picks Region, and selects EMEA."},
+  {"start": "0:34", "end": "0:44", "title": "Export the report", "description": "The user opens the Export menu and chooses CSV."},
+  {"start": "0:48", "end": "0:58", "title": "Schedule delivery", "description": "The user clicks Schedule, sets weekly on Monday, and saves."}
+]
